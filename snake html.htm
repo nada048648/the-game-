@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة الثعبان البيئي - تعلم مع الحفاظ على البيئة</title>
+   <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <div class="container">
+        <header class="game-header">
+            <h1>🐍 لعبة الثعبان البيئي</h1>
+            <p class="subtitle">تعلم الفرق بين السلوك البيئي الصحيح والخاطئ!</p>
+        </header>
+
+        <div class="game-container">
+            <canvas id="gameCanvas" width="600" height="400"></canvas>
+            
+            <div class="game-controls">
+                <div class="score-board">
+                    <div class="score">النقاط: <span id="score">0</span></div>
+                    <div class="length">الطول: <span id="length">3</span></div>
+                </div>
+                
+                <div class="controls">
+                    <button id="startBtn" class="btn btn-primary">بدء اللعبة</button>
+                    <button id="pauseBtn" class="btn btn-secondary" disabled>إيقاف مؤقت</button>
+                    <button id="restartBtn" class="btn btn-warning">إعادة تشغيل</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="educational-message" id="messageBox">
+            <div class="message-content">
+                <span id="messageText"></span>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>كيف تلعب:</h3>
+            <ul>
+                <li>استخدم مفاتيح الأسهم للتحكم في الثعبان</li>
+                <li>اجمع العناصر الخضراء (🌳 ♻️ ☀️) لزيادة طولك</li>
+                <li>تجنب العناصر الحمراء (🏭 🔥 🛢️) التي تقلل طولك</li>
+                <li>لا تصطدم بالجدران أو بنفسك!</li>
+            </ul>
+            
+            <div class="legend">
+                <h3>معاني الرموز:</h3>
+                <div class="legend-items">
+                    <div class="legend-item good">
+                        <span class="symbol">🌳</span>
+                        <span>أشجار - تحافظ على البيئة</span>
+                    </div>
+                    <div class="legend-item good">
+                        <span class="symbol">♻️</span>
+                        <span>إعادة التدوير - تحافظ على الموارد</span>
+                    </div>
+                    <div class="legend-item good">
+                        <span class="symbol">☀️</span>
+                        <span>طاقة شمسية - نظيفة ومتجددة</span>
+                    </div>
+                    <div class="legend-item bad">
+                        <span class="symbol">🏭</span>
+                        <span>مصانع ملوثة - تضر بالهواء</span>
+                    </div>
+                    <div class="legend-item bad">
+                        <span class="symbol">🔥</span>
+                        <span>حرق النفايات - يطلق سمومًا</span>
+                    </div>
+                    <div class="legend-item bad">
+                        <span class="symbol">🛢️</span>
+                        <span>وقود أحفوري - يسبب التلوث</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="snake js.js"></script>
+</body>
+</html>
+
